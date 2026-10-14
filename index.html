@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNE | Ropa y accesorios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">LUNE</a>
+
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" aria-label="Cambiar modo">🌙</button>
+      <button id="cartBtn" class="cart-btn">🛒 Carrito <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">NUEVA COLECCIÓN</p>
+        <h1>Tu estilo,<br><span>a tu manera.</span></h1>
+        <p class="hero-text">Ropa y accesorios para crear looks cómodos, modernos y con personalidad.</p>
+        <a href="#productos" class="main-btn">Ver productos</a>
+      </div>
+      <div class="hero-card">
+        <span>01</span>
+        <p>Simple.<br>Actual.<br>Vos.</p>
+      </div>
+    </section>
+
+    <section id="productos" class="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TIENDA</p>
+          <h2>Elegí tu favorito</h2>
+        </div>
+        <input id="searchInput" type="search" placeholder="Buscar producto...">
+      </div>
+
+      <div id="categories" class="categories"></div>
+      <p id="productMessage" class="product-message"></p>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Tu carrito</h2>
+      <button id="closeCart" class="close-btn">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="discount-box">
+      <label for="discountInput">Código de descuento</label>
+      <div class="discount-row">
+        <input id="discountInput" type="text" placeholder="Ej: LUNE10">
+        <button id="discountBtn" class="small-btn">Aplicar</button>
+      </div>
+      <p id="discountMessage"></p>
+    </div>
+
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+      <div><span>Descuento</span><strong id="discountAmount">$0</strong></div>
+      <div class="total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <button id="checkoutBtn" class="main-btn full">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <div>
+      <strong>LUNE</strong>
+      <p>Ropa y accesorios con identidad propia.</p>
+    </div>
+    <p>Proyecto escolar · HTML + CSS + JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
